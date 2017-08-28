@@ -1,7 +1,7 @@
 {
-  "name": "mojzunet.github.io",
+  "name": "mojzunet",
   "version": "0.1.0",
-  "repository": "https://github.com/mojzunet/mojzunet.github.io.git",
+  "repository": "https://github.com/mojzunet/mojzunet.git",
   "author": "mojzu <mail@mojzu.net>",
   "license": "Unlicense",
   "private": true,

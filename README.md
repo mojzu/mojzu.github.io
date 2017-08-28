@@ -1,9 +1,7 @@
-# mojzunet.github.io
+# MojzuNet
 
 ## Developer
 
 ```Shell
 $ yarn run build-github
-# Copy /dist to /docs.
-# Copy /docs/index.html to /docs/404.html
 ```
