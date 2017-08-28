@@ -1,0 +1,9 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$mojzunet-primary: mat-palette($mat-green);
+$mojzunet-accent: mat-palette($mat-brown);
+$mojzunet-theme: mat-light-theme($mojzunet-primary, $mojzunet-accent);
+
+@include angular-material-theme($mojzunet-theme);
