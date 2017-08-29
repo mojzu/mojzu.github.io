@@ -1,4 +1,17 @@
-<md-toolbar color="primary">
-  {{title}}
-</md-toolbar>
-<router-outlet></router-outlet>
+<div class="container" fxLayout="column" fxLayoutAlign="start center">
+  <div class="header-container" class.xs="header-container-xs">
+    <header class="header" role="banner">
+    </header>
+  </div>
+
+  <div class="main-container" class.xs="main-container-xs">
+    <main class="main" role="main">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <div class="footer-container" class.xs="footer-container-xs">
+    <footer class="footer" role="contentinfo">
+    </footer>
+  </div>
+</div>
