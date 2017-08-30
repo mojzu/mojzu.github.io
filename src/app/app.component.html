@@ -1,17 +1,16 @@
 <div class="container" fxLayout="column" fxLayoutAlign="start center">
-  <div class="header-container" class.xs="header-container-xs">
-    <header class="header" role="banner">
-    </header>
+  <div class.xs="header-container-xs" class.sm="header-container-sm" class.md="header-container-md" class.gt-md="header-container-lg">
+    <header class="header" role="banner"></header>
   </div>
 
-  <div class="main-container" class.xs="main-container-xs">
-    <main class="main" role="main">
+  <div class.xs="main-container-xs" class.sm="main-container-sm" class.md="main-container-md" class.gt-md="main-container-lg"
+    fxLayout="column" fxLayoutAlign="center center">
+    <main class="main mat-elevation-z4" role="main">
       <router-outlet></router-outlet>
     </main>
   </div>
 
   <div class="footer-container" class.xs="footer-container-xs">
-    <footer class="footer" role="contentinfo">
-    </footer>
+    <footer class="footer" role="contentinfo"></footer>
   </div>
 </div>
