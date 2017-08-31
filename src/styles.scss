@@ -1,4 +1,5 @@
 @import "~@angular/material/theming";
+@import "app/app.component.scss";
 
 @include mat-core();
 
@@ -9,8 +10,9 @@ body {
   min-height: 100vh;
 }
 
-$mojzunet-primary: mat-palette($mat-green);
-$mojzunet-accent: mat-palette($mat-brown);
+$mojzunet-primary: mat-palette($mat-deep-purple);
+$mojzunet-accent: mat-palette($mat-light-green);
 $mojzunet-theme: mat-light-theme($mojzunet-primary, $mojzunet-accent);
 
 @include angular-material-theme($mojzunet-theme);
+@include app-component-theme($mojzunet-theme);
