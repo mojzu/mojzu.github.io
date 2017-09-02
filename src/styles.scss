@@ -1,14 +1,8 @@
+@import "~normalize.css/normalize.css";
 @import "~@angular/material/theming";
 @import "app/app.component.scss";
 
 @include mat-core();
-
-body {
-  margin: 0;
-  min-width: 100vw;
-  max-width: 100vw;
-  min-height: 100vh;
-}
 
 $mojzunet-primary: mat-palette($mat-deep-purple);
 $mojzunet-accent: mat-palette($mat-light-green);

@@ -1,18 +1,19 @@
-<div class="container-primary-overlay"></div>
-<div class="container-secondary-overlay"></div>
-<div class="container" fxLayout="column" fxLayoutAlign="start center">
-  <div class.xs="header-container-xs" class.sm="header-container-sm" class.md="header-container-md" class.gt-md="header-container-lg">
-    <header class="header" role="banner"></header>
-  </div>
+<div class="app-container">
+  <div class="app" fxLayout="column" fxLayoutAlign="start center">
 
-  <div class.xs="main-container-xs" class.sm="main-container-sm" class.md="main-container-md" class.gt-md="main-container-lg">
-    <main class="main mat-elevation-z8" role="main" fxLayout="column">
-      <md-toolbar color="primary">MojzuNet</md-toolbar>
-      <router-outlet></router-outlet>
-    </main>
-  </div>
+    <!-- Application header. -->
+    <div class.xs="app-header-xs" class.sm="app-header-sm" class.md="app-header-md" class.gt-md="app-header-lg">
+      <header class="app-header" role="banner">
 
-  <div class="footer-container" class.xs="footer-container-xs">
-    <footer class="footer" role="contentinfo"></footer>
+      </header>
+    </div>
+
+    <!-- Application main content. -->
+    <div class.xs="app-main-xs" class.sm="app-main-sm" class.md="app-main-md" class.gt-md="app-main-lg">
+      <main class="app-main mat-elevation-z8" role="main">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+
   </div>
 </div>
