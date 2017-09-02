@@ -6,26 +6,47 @@
   $logo-size: 120px;
 
   // Container.
-  .container {
-    width: 100vw;
+  .container-overlay {
     min-width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    position: absolute;
+  }
+  .container-primary-overlay {
+    @extend .container-overlay;
+    z-index: 10;
+    background-image: url("./styles/images/background-accent.png");
+    background-size: 800px;
+    background-attachment: fixed;
+  }
+  .container-secondary-overlay {
+    @extend .container-overlay;
+    z-index: 20;
+    background-image: url("./styles/images/background-primary.png");
+    background-size: 800px;
+  }
+  .container {
+    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     background-color: $primary-background;
   }
   .container-xs {
+    z-index: 30;
     width: 100%;
     max-width: 100%;
   }
   .container-sm {
+    z-index: 30;
     width: 600px;
     max-width: 600px;
   }
   .container-md {
+    z-index: 30;
     width: 840px;
     max-width: 840px;
   }
   .container-lg {
+    z-index: 30;
     width: 960px;
     max-width: 960px;
   }
@@ -69,6 +90,7 @@
     width: 100%;
     min-width: 100%;
     border: 1px solid mat-color($primary, A400);
+    border-radius: 2px;
   }
   .main-container-xs {
     @extend .container-xs;
