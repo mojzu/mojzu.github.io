@@ -1,12 +1,14 @@
 @import "~normalize.css/normalize.css";
 @import "~@angular/material/theming";
-@import "app/app.component.scss";
+@import "app/app.scss";
+@import "app/components/home/home.scss";
 
 @include mat-core();
 
-$mojzunet-primary: mat-palette($mat-deep-purple);
-$mojzunet-accent: mat-palette($mat-light-green);
+$mojzunet-primary: mat-palette($mat-blue-grey);
+$mojzunet-accent: mat-palette($mat-indigo);
 $mojzunet-theme: mat-light-theme($mojzunet-primary, $mojzunet-accent);
 
 @include angular-material-theme($mojzunet-theme);
-@include app-component-theme($mojzunet-theme);
+@include app-theme($mojzunet-theme);
+@include home-theme($mojzunet-theme);

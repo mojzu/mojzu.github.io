@@ -1,10 +1,31 @@
+@import "~@angular/material/theming";
 
-.home-container {
-  padding: 1px;
-}
-.home-tile {
-  min-width: 100%;
-  min-height: 100%;
-  box-sizing: border-box;
-  border: 1px solid #333;
+@mixin home-theme($theme) {
+
+  // Theme properties.
+  $primary: map-get($theme, primary);
+  $primary-border: mat-color($primary, 800);
+  $background: mat-color($mat-grey, 50);
+
+  // Home container.
+  .home-container {
+    padding: 1px;
+  }
+
+  // Home elements.
+  .home-element {
+    box-sizing: border-box;
+    border: 1px solid $primary-border;
+    background-color: $background;
+  }
+  .home-content {
+    @extend .home-element;
+    margin-bottom: 1px;
+  }
+  .home-tile {
+    @extend .home-element;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
 }

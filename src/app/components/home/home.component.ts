@@ -4,7 +4,6 @@ import { ITile } from "./home";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.scss"],
 })
 export class HomeComponent {
 

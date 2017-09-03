@@ -22,11 +22,13 @@
   box-sizing: border-box;
 }
 
-@mixin app-component-theme($theme) {
+@mixin app-theme($theme) {
 
   // Theme properties.
   $primary: map-get($theme, primary);
-  $primary-background: mat-color($primary, 50, 20);
+  $accent: map-get($theme, accent);
+  $primary-background: mat-color($primary, 50);
+  $accent-background: mat-color($accent, 50);
   $logo-size: 120px;
 
   // Application container.
@@ -35,9 +37,12 @@
     max-width: 100%;
     min-height: 100vh;
     background-color: $primary-background;
-    background-image: url("./styles/images/background-primary.png"), url("./styles/images/background-accent.png");
-    background-attachment: fixed, scroll;
-    background-size: 750px, 750px;
+    background-image:
+      url("./styles/images/background-primary.png"),
+      url("./styles/images/background.jpg");
+    background-attachment: scroll, scroll;
+    background-blend-mode: screen, normal;
+    background-size: 750px, 100%;
   }
   .app {
     min-width: 100%;
@@ -96,10 +101,6 @@
   .app-main-lg {
     @extend .container-lg;
     @extend .app-main-container-md;
-  }
-  .app-main {
-    background-color: mat-color($mat-grey, 50);
-    border: 1px solid mat-color($primary, A400);
   }
 
 }
