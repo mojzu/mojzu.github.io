@@ -7,7 +7,7 @@
   <md-grid-list cols="4" rowHeight="2:1">
     <ng-container *ngFor="let tile of tiles; let i = index">
 
-      <md-grid-tile [colspan]="tileColumnSpan(i)" [rowspan]="tileRowSpan(i)">
+      <md-grid-tile [colspan]="tileColumns[i]" [rowspan]="tileRows[i]">
         <div class="home-tile">
           {{ tile.text }}
         </div>

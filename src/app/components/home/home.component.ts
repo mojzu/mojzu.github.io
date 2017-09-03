@@ -1,11 +1,13 @@
-import { Component } from "@angular/core";
+import { Component, OnDestroy } from "@angular/core";
+import { MediaChange, ObservableMedia } from "@angular/flex-layout";
+import { Subscription } from "rxjs/Subscription";
 import { ITile } from "./home";
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
 })
-export class HomeComponent {
+export class HomeComponent implements OnDestroy {
 
   public tiles: ITile[] = [
     {
@@ -28,26 +30,67 @@ export class HomeComponent {
     },
   ];
 
-  public constructor() { }
+  // Tile layouts based on screen size.
+  public tileColumns: number[];
+  public tileRows: number[];
 
-  public tileColumnSpan(index: number): number {
-    if (index === 0) {
-      return 4;
-    } else if (index < 3) {
-      return 2;
-    } else {
-      return 1;
-    }
+  /** Subscriber to observable media service. */
+  protected mediaWatcher: Subscription;
+
+  public constructor(
+    protected media: ObservableMedia,
+  ) {
+    this.mediaWatcher = media.subscribe((change: MediaChange) => {
+      this.layoutTiles(change.mqAlias);
+    });
   }
 
-  public tileRowSpan(index: number): number {
-    if (index === 0) {
-      return 3;
-    } else if (index < 3) {
-      return 2;
-    } else {
-      return 1;
-    }
+  public ngOnDestroy(): void {
+    this.mediaWatcher.unsubscribe();
+  }
+
+  protected layoutTiles(layout: string): void {
+    const tileColumns = this.tileColumns || new Array(this.tiles.length).fill(1);
+    const tileRows = this.tileRows || new Array(this.tiles.length).fill(1);
+
+    tileColumns.map((v, i) => {
+      switch (layout) {
+        // Mobile layout.
+        case "xs": {
+          tileColumns[i] = 4;
+          tileRows[i] = 4;
+          break;
+        }
+        // Tablet layout.
+        case "sm": {
+          if (i < 1) {
+            tileColumns[i] = 4;
+            tileRows[i] = 4;
+          } else {
+            tileColumns[i] = 2;
+            tileRows[i] = 2;
+          }
+          break;
+        }
+        // Desktop layout.
+        default: {
+          if (i < 1) {
+            tileColumns[i] = 4;
+            tileRows[i] = 4;
+          } else if (i < 3) {
+            tileColumns[i] = 2;
+            tileRows[i] = 2;
+          } else {
+            tileColumns[i] = 1;
+            tileRows[i] = 1;
+          }
+          break;
+        }
+      }
+    });
+
+    this.tileColumns = tileColumns;
+    this.tileRows = tileRows;
   }
 
 }
