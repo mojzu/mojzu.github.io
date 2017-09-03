@@ -27,8 +27,8 @@
   // Theme properties.
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
-  $primary-background: mat-color($primary, 50);
-  $accent-background: mat-color($accent, 50);
+  $primary-background: mat-color($primary, 100);
+  $accent-background: mat-color($accent, 200);
   $logo-size: 120px;
 
   // Application container.
@@ -36,12 +36,12 @@
     min-width: 100%;
     max-width: 100%;
     min-height: 100vh;
-    background-color: $primary-background;
+    background: $primary-background;
     background-image:
       url("./styles/images/background-primary.png"),
-      url("./styles/images/background.jpg");
-    background-attachment: scroll, scroll;
-    background-blend-mode: screen, normal;
+      radial-gradient(circle, $accent-background, $primary-background);
+    background-attachment: fixed, scroll;
+    background-blend-mode: screen, screen;
     background-size: 750px, 100%;
   }
   .app {

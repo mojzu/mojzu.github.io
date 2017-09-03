@@ -3,6 +3,14 @@
 @import "app/app.scss";
 @import "app/components/home/home.scss";
 
+// Google fonts.
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+$open-sans: "Open Sans", sans-serif;
+
+body {
+  font-family: $open-sans;
+}
+
 @include mat-core();
 
 $mojzunet-primary: mat-palette($mat-blue-grey);
