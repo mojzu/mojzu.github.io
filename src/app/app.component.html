@@ -11,7 +11,24 @@
     <!-- Application main content. -->
     <div class.xs="app-main-xs" class.sm="app-main-sm" class.md="app-main-md" class.gt-md="app-main-lg">
       <main class="app-main" role="main">
+
+        <!-- Application main header. -->
+        <div class="app-main-header mat-elevation-z8">
+          <md-toolbar color="accent">
+            <!-- TODO: Fix anchor text style. -->
+            <a routerLink="/">
+              <h1>Sam Ward</h1>
+            </a>
+            <span class="header-spacer"></span>
+            <a md-raised-button color="primary" href="https://github.com/mojzunet" target="_blank" aria-label="GitHub Profile">
+                GitHub
+              </a>
+          </md-toolbar>
+        </div>
+
+        <!-- Application router. -->
         <router-outlet></router-outlet>
+
       </main>
     </div>
 

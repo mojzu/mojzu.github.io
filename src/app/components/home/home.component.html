@@ -1,15 +1,24 @@
 <div class="home-container">
   <!-- Home content. -->
-  <div class="home-content">
-  </div>
+  <!-- <div class="home-content mat-elevation-z8"></div> -->
 
   <!-- Home tiles grid. -->
   <md-grid-list cols="4" rowHeight="2:1">
     <ng-container *ngFor="let tile of tiles; let i = index">
 
-      <md-grid-tile [colspan]="tileColumns[i]" [rowspan]="tileRows[i]">
-        <div class="home-tile">
-          {{ tile.text }}
+      <md-grid-tile class="mat-elevation-z8" [colspan]="tileColumns[i]" [rowspan]="tileRows[i]">
+        <div class="home-tile" fxLayout="column">
+
+          <img class="home-tile-background" src="assets/{{ tile.background }}">
+          <div class="home-tile-overlay-container" fxLayout="column">
+            <a [routerLink]="tile.link">
+              <div class="home-tile-overlay mat-elevation-z8" fxLayout="column">
+                <h2>{{ tile.title }}</h2>
+                <p>{{ tile.description }}</p>
+              </div>
+            </a>
+          </div>
+
         </div>
       </md-grid-tile>
 

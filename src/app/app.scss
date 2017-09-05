@@ -27,8 +27,10 @@
   // Theme properties.
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
+  $primary-border: mat-color($primary, 800);
   $primary-background: mat-color($primary, 100);
   $accent-background: mat-color($accent, 200);
+  $background: mat-color($mat-grey, 50);
   $logo-size: 120px;
 
   // Application container.
@@ -77,6 +79,18 @@
     background-size: $logo-size;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  .app-main-header {
+    margin: 1px;
+    box-sizing: border-box;
+    border: 1px solid $primary-border;
+    border-radius: 1px;
+    background-color: $background;
+    margin-bottom: 1px;
+
+    .header-spacer {
+      flex: 1 1 auto;
+    }
   }
 
   // Application main content.

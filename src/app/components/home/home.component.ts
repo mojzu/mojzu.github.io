@@ -5,7 +5,7 @@ import * as marginCalculator from "../margin-calculator";
 import { ITile } from "./home";
 
 @Component({
-  selector: "app-home",
+  selector: "AppHome",
   templateUrl: "./home.component.html",
 })
 export class HomeComponent implements OnDestroy {
@@ -45,28 +45,14 @@ export class HomeComponent implements OnDestroy {
           tileRows[i] = 4;
           break;
         }
-        // Tablet layout.
-        case "sm": {
-          if (i < 1) {
-            tileColumns[i] = 4;
-            tileRows[i] = 4;
-          } else {
-            tileColumns[i] = 2;
-            tileRows[i] = 2;
-          }
-          break;
-        }
         // Desktop layout.
         default: {
           if (i < 1) {
             tileColumns[i] = 4;
             tileRows[i] = 4;
-          } else if (i < 3) {
+          } else {
             tileColumns[i] = 2;
             tileRows[i] = 2;
-          } else {
-            tileColumns[i] = 1;
-            tileRows[i] = 1;
           }
           break;
         }

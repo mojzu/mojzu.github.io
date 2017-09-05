@@ -4,8 +4,12 @@
 
   // Theme properties.
   $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
   $primary-border: mat-color($primary, 800);
+  $accent-border: mat-color($accent, 800);
+  $accent-background: mat-color($accent, 100);
   $background: mat-color($mat-grey, 50);
+  $text-color: mat-color($mat-grey, 900);
 
   // Home container.
   .home-container {
@@ -16,6 +20,7 @@
   .home-element {
     box-sizing: border-box;
     border: 1px solid $primary-border;
+    border-radius: 1px;
     background-color: $background;
   }
   .home-content {
@@ -26,6 +31,42 @@
     @extend .home-element;
     min-width: 100%;
     min-height: 100%;
+  }
+  .home-tile-background {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+  }
+  .home-tile:hover .home-tile-background {
+    opacity: 0.6;
+  }
+  .home-tile-overlay-container {
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    opacity: 0;
+    transition: .5s ease;
+    padding: 32px;
+  }
+  .home-tile:hover .home-tile-overlay-container {
+    opacity: 1;
+  }
+  .home-tile-overlay {
+    box-sizing: border-box;
+    border: 2px solid $accent-border;
+    border-radius: 1px;
+    background-color: $background;
+    width: 100%;
+    color: $text-color;
+
+    h2 {
+      margin: 0.83em 0.83em 0 0.83em;
+    }
+    p {
+      margin: 0.83em;
+    }
+  }
+  .home-tile-overlay:hover {
+    background-color: $accent-background;
   }
 
 }
