@@ -1,4 +1,5 @@
 
 export interface ITile {
-  text: string;
+  background: string;
+  title: string;
 }

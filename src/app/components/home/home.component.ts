@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from "@angular/core";
 import { MediaChange, ObservableMedia } from "@angular/flex-layout";
 import { Subscription } from "rxjs/Subscription";
+import * as marginCalculator from "../margin-calculator";
 import { ITile } from "./home";
 
 @Component({
@@ -10,24 +11,7 @@ import { ITile } from "./home";
 export class HomeComponent implements OnDestroy {
 
   public tiles: ITile[] = [
-    {
-      text: "1",
-    },
-    {
-      text: "2",
-    },
-    {
-      text: "3",
-    },
-    {
-      text: "4",
-    },
-    {
-      text: "5",
-    },
-    {
-      text: "6",
-    },
+    marginCalculator.tile,
   ];
 
   // Tile layouts based on screen size.
