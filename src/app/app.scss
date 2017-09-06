@@ -81,12 +81,8 @@
     background-repeat: no-repeat;
   }
   .app-main-header {
-    margin: 1px;
-    box-sizing: border-box;
-    border: 1px solid $primary-border;
-    border-radius: 1px;
     background-color: $background;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
 
     .header-spacer {
       flex: 1 1 auto;

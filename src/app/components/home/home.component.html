@@ -3,7 +3,7 @@
   <!-- <div class="home-content mat-elevation-z8"></div> -->
 
   <!-- Home tiles grid. -->
-  <md-grid-list cols="4" rowHeight="2:1">
+  <md-grid-list cols="4" rowHeight="2:1" gutterSize="5px">
     <ng-container *ngFor="let tile of tiles; let i = index">
 
       <md-grid-tile class="mat-elevation-z8" [colspan]="tileColumns[i]" [rowspan]="tileRows[i]">
@@ -11,12 +11,12 @@
 
           <img class="home-tile-background" src="assets/{{ tile.background }}">
           <div class="home-tile-overlay-container" fxLayout="column">
-            <a [routerLink]="tile.link">
-              <div class="home-tile-overlay mat-elevation-z8" fxLayout="column">
+            <div class="home-tile-overlay mat-elevation-z8">
+              <a [routerLink]="tile.link">
                 <h2>{{ tile.title }}</h2>
                 <p>{{ tile.description }}</p>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
 
         </div>

@@ -10,6 +10,7 @@ import { ITile } from "./home";
 })
 export class HomeComponent implements OnDestroy {
 
+  /** Tiles. */
   public tiles: ITile[] = [
     marginCalculator.tile,
   ];
@@ -24,21 +25,30 @@ export class HomeComponent implements OnDestroy {
   public constructor(
     protected media: ObservableMedia,
   ) {
+    // Initialise tile layout and subscribe to changes.
+    this.layoutTiles();
     this.mediaWatcher = media.subscribe((change: MediaChange) => {
       this.layoutTiles(change.mqAlias);
     });
   }
 
   public ngOnDestroy(): void {
+    // Destroy observable subscriber.
     this.mediaWatcher.unsubscribe();
   }
 
-  protected layoutTiles(layout: string): void {
+  protected layoutTiles(query?: string): void {
+    // Test for active query if none provided.
+    if (query == null) {
+      query = this.media.isActive("xs") ? "xs" : "md";
+    }
+
+    // Reuse existing arrays or create new ones.
     const tileColumns = this.tileColumns || new Array(this.tiles.length).fill(1);
     const tileRows = this.tileRows || new Array(this.tiles.length).fill(1);
 
     tileColumns.map((v, i) => {
-      switch (layout) {
+      switch (query) {
         // Mobile layout.
         case "xs": {
           tileColumns[i] = 4;
@@ -59,6 +69,7 @@ export class HomeComponent implements OnDestroy {
       }
     });
 
+    // (Re)assign properties.
     this.tileColumns = tileColumns;
     this.tileRows = tileRows;
   }

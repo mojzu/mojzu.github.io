@@ -12,20 +12,15 @@
   $text-color: mat-color($mat-grey, 900);
 
   // Home container.
-  .home-container {
-    padding: 1px;
-  }
+  // .home-container {}
 
   // Home elements.
   .home-element {
-    box-sizing: border-box;
-    border: 1px solid $primary-border;
-    border-radius: 1px;
     background-color: $background;
   }
   .home-content {
     @extend .home-element;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
   }
   .home-tile {
     @extend .home-element;
@@ -33,16 +28,16 @@
     min-height: 100%;
   }
   .home-tile-background {
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
+    width: 100%;
+    height: 100%;
   }
   .home-tile:hover .home-tile-background {
     opacity: 0.6;
   }
   .home-tile-overlay-container {
     position: absolute;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
+    width: 100%;
+    height: 100%;
     opacity: 0;
     transition: .5s ease;
     padding: 32px;
@@ -57,12 +52,16 @@
     background-color: $background;
     width: 100%;
     color: $text-color;
+    max-height: 100%;
+    overflow-y: auto;
 
     h2 {
-      margin: 0.83em 0.83em 0 0.83em;
+      margin: 0 0.83em;
+      padding: 0.83em 0 0 0;
     }
     p {
-      margin: 0.83em;
+      margin: 0 0.83em;
+      padding: 0.83em 0;
     }
   }
   .home-tile-overlay:hover {

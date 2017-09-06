@@ -8,17 +8,13 @@
   $background: mat-color($mat-grey, 50);
 
   // Margin calculator container.
-  .margin-calculator-container {
-    padding: 1px;
-  }
+  // .margin-calculator-container {}
 
   // Margin calculator elements.
   .margin-calculator-content {
     box-sizing: border-box;
-    border: 1px solid $primary-border;
-    border-radius: 1px;
     background-color: $background;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
 
     h2 {
       margin: 0.83em;
