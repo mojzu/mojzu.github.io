@@ -87,6 +87,16 @@
     .header-spacer {
       flex: 1 1 auto;
     }
+    .button {
+      height: 56px;
+    }
+    .button-text {
+      margin-left: 5px;
+      line-height: 56px;
+    }
+    h1 {
+      line-height: 56px;
+    }
   }
 
   // Application main content.

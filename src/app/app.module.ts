@@ -1,7 +1,14 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+// TODO: Replace with HttpClientModule.
+import { HttpModule } from "@angular/http";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { MdToolbarModule, MdButtonModule, MdGridListModule } from "@angular/material";
+import {
+  MdToolbarModule,
+  MdButtonModule,
+  MdIconModule,
+  MdGridListModule,
+} from "@angular/material";
 import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -21,11 +28,13 @@ import { MarginCalculatorComponent } from "./components/margin-calculator";
     // Angular modules.
     BrowserModule,
     BrowserAnimationsModule,
+    HttpModule,
 
     // Flex layout, Material modules.
     FlexLayoutModule,
     MdToolbarModule,
     MdButtonModule,
+    MdIconModule,
     MdGridListModule,
 
     // Application modules.

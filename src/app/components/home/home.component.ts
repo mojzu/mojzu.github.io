@@ -13,6 +13,7 @@ export class HomeComponent implements OnDestroy {
   /** Tiles. */
   public tiles: ITile[] = [
     marginCalculator.tile,
+    // TODO: MojzuNet tile.
   ];
 
   // Tile layouts based on screen size.
