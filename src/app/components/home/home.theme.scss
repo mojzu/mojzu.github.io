@@ -1,0 +1,33 @@
+@import "~@angular/material/theming";
+
+@mixin home-theme($theme) {
+
+  // Theme properties.
+  $accent: map-get($theme, accent);
+  $accent-background: mat-color($accent, 100);
+  $accent-border: mat-color($accent, 800);
+  $background: mat-color($mat-grey, 50);
+
+  // Home container.
+  .home {
+    .content {
+      background-color: $background;
+    }
+    .tile {
+      background-color: $background;
+
+      // Tile overlay content.
+      .overlay {
+        border: 2px solid $accent-border;
+        border-radius: 1px;
+        background-color: $background;
+
+        &:hover {
+          background-color: $accent-background;
+        }
+      }
+    }
+
+  }
+
+}

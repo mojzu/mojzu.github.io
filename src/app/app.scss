@@ -1,126 +1,72 @@
-@import "~@angular/material/theming";
 
-// Container sizes.
-.container-xs {
-  width: 100%;
+// Container padding.
+.app-padding-sm {
+  padding: 5px;
+  box-sizing: border-box;
+}
+.app-padding-md {
+  padding: 16px 0;
+  box-sizing: border-box;
+}
+
+// Application root element.
+.app {
+  min-width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
-}
-.container-sm {
-  width: 600px;
-  max-width: 600px;
-  box-sizing: border-box;
-}
-.container-md {
-  width: 840px;
-  max-width: 840px;
-  box-sizing: border-box;
-}
-.container-lg {
-  width: 960px;
-  max-width: 960px;
-  box-sizing: border-box;
-}
+  min-height: 100vh;
 
-@mixin app-theme($theme) {
-
-  // Theme properties.
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $primary-border: mat-color($primary, 800);
-  $primary-background: mat-color($primary, 100);
-  $accent-background: mat-color($accent, 200);
-  $background: mat-color($mat-grey, 50);
-  $logo-size: 120px;
-
-  // Application container.
-  .app-container {
+  // Application container sizes.
+  .app-xs {
+    @extend .app-padding-sm;
     min-width: 100%;
     max-width: 100%;
-    min-height: 100vh;
-    background: $primary-background;
-    background-image:
-      url("./styles/images/background-primary.png"),
-      radial-gradient(circle, $accent-background, $primary-background);
-    background-attachment: fixed, scroll;
-    background-blend-mode: screen, screen;
-    background-size: 750px, 100%;
   }
-  .app {
-    min-width: 100%;
-    max-width: 100%;
+  .app-sm {
+    @extend .app-padding-sm;
+    min-width: 600px;
+    max-width: 600px;
+  }
+  .app-md {
+    @extend .app-padding-md;
+    min-width: 840px;
+    max-width: 840px;
+  }
+  .app-lg {
+    @extend .app-padding-md;
+    min-width: 960px;
+    max-width: 960px;
   }
 
   // Application header.
-  .app-header-container {
-    height: $logo-size;
-    max-height: $logo-size;
-  }
-  .app-header-xs {
-    @extend .container-xs;
-    @extend .app-header-container;
-  }
-  .app-header-sm {
-    @extend .container-sm;
-    @extend .app-header-container;
-  }
-  .app-header-md {
-    @extend .container-md;
-    @extend .app-header-container;
-  }
-  .app-header-lg {
-    @extend .container-lg;
-    @extend .app-header-container;
-  }
-  .app-header {
-    min-height: 100%;
-    min-width: 100%;
-    background-image: url("./styles/images/logo.png");
-    background-size: $logo-size;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .app-main-header {
-    background-color: $background;
+  .header {
     margin-bottom: 5px;
 
-    .header-spacer {
+    // Header content spacer.
+    .space {
       flex: 1 1 auto;
     }
+    // Header buttons.
     .button {
-      height: 56px;
-    }
-    .button-text {
-      margin-left: 5px;
-      line-height: 56px;
-    }
-    h1 {
-      line-height: 56px;
-    }
-  }
+      height: 100%;
 
-  // Application main content.
-  .app-main-container-sm {
-    padding: 0 5px 5px 5px;
+      // Responsive heights based on Material toolbar sizes.
+      .large-icon {
+        height: 46px;
+        width: 46px;
+        @media (max-width: 600px) {
+          height: 42px;
+          width: 42px;
+        }
+      }
+      .text {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 6px;
+        line-height: 64px;
+        @media (max-width: 600px) {
+          line-height: 54px;
+        }
+      }
+    }
   }
-  .app-main-container-md {
-    padding: 0 0 16px 0;
-  }
-  .app-main-xs {
-    @extend .container-xs;
-    @extend .app-main-container-sm;
-  }
-  .app-main-sm {
-    @extend .container-sm;
-    @extend .app-main-container-sm;
-  }
-  .app-main-md {
-    @extend .container-md;
-    @extend .app-main-container-md;
-  }
-  .app-main-lg {
-    @extend .container-lg;
-    @extend .app-main-container-md;
-  }
-
 }

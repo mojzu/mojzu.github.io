@@ -1,12 +1,10 @@
 @import "~normalize.css/normalize.css";
 @import "~@angular/material/theming";
 
-// TODO: Refactor styles.
-
 // Component mixins.
-@import "app/app.scss";
-@import "app/components/home/home.scss";
-@import "app/components/margin-calculator/margin-calculator.scss";
+@import "app/app.theme.scss";
+@import "app/components/home/home.theme.scss";
+@import "app/components/margin-calculator/margin-calculator.theme.scss";
 
 // Google fonts.
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
@@ -16,7 +14,6 @@ $open-sans: "Open Sans", sans-serif;
 body {
   font-family: $open-sans;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -25,19 +22,13 @@ a {
 // Angular material.
 @include mat-core();
 
-// Material toolbar overrides.
-// TODO: Use responsive height for header buttons.
-md-toolbar.mat-toolbar,
-md-toolbar-row.mat-toolbar-row {
-  min-height: 56px !important;
-  max-height: 56px !important;
-}
-
+// Angular material theme.
 $mojzunet-primary: mat-palette($mat-blue-grey);
 $mojzunet-accent: mat-palette($mat-indigo);
 $mojzunet-theme: mat-light-theme($mojzunet-primary, $mojzunet-accent);
-
 @include angular-material-theme($mojzunet-theme);
+
+// Component mixin themes.
 @include app-theme($mojzunet-theme);
 @include home-theme($mojzunet-theme);
 @include margin-calculator-theme($mojzunet-theme);

@@ -1,24 +1,8 @@
-@import "~@angular/material/theming";
 
-@mixin margin-calculator-theme($theme) {
+// Margin calculator container.
+.margin-calculator {
 
-  // Theme properties.
-  $primary: map-get($theme, primary);
-  $primary-border: mat-color($primary, 800);
-  $background: mat-color($mat-grey, 50);
+  .content {
 
-  // Margin calculator container.
-  // .margin-calculator-container {}
-
-  // Margin calculator elements.
-  .margin-calculator-content {
-    box-sizing: border-box;
-    background-color: $background;
-    margin-bottom: 5px;
-
-    h2 {
-      margin: 0.83em;
-    }
   }
-
 }

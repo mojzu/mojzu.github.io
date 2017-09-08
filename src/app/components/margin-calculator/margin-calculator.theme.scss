@@ -1,0 +1,15 @@
+@import "~@angular/material/theming";
+
+@mixin margin-calculator-theme($theme) {
+
+  // Theme properties.
+  $background: mat-color($mat-grey, 50);
+
+  // Margin calculator container.
+  .margin-calculator {
+    .content {
+      background-color: $background;
+    }
+  }
+
+}

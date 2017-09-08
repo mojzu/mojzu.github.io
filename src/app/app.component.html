@@ -1,37 +1,31 @@
-<div class="app-container">
-  <div class="app" fxLayout="column" fxLayoutAlign="start center">
+<div class="app" fxLayout="column" fxLayoutAlign="start center">
+
+  <!-- Application container. -->
+  <div class.xs="app-xs" class.sm="app-sm" class.md="app-md" class.gt-md="app-lg">
 
     <!-- Application header. -->
-    <div class.xs="app-header-xs" class.sm="app-header-sm" class.md="app-header-md" class.gt-md="app-header-lg">
-      <header class="app-header" role="banner">
+    <header class="header mat-elevation-z8" role="banner">
+      <md-toolbar color="accent">
+        <a md-button class="button" routerLink="/" aria-label="Home">
+          <md-icon svgIcon="mojzu" class="large-icon"></md-icon>
+          <span class="text">MojzuNet</span>
+        </a>
+        <span class="space"></span>
+        <a md-button class="button" href="https://github.com/mojzunet" target="_blank" aria-label="GitHub">
+          <md-icon svgIcon="github"></md-icon>
+          <span class="text">GitHub</span>
+        </a>
+      </md-toolbar>
+    </header>
 
-      </header>
-    </div>
+    <!-- Application main container. -->
+    <main class="main" role="main">
 
-    <!-- Application main content. -->
-    <div class.xs="app-main-xs" class.sm="app-main-sm" class.md="app-main-md" class.gt-md="app-main-lg">
-      <main class="app-main" role="main">
+      <!-- Application router. -->
+      <router-outlet></router-outlet>
 
-        <!-- Application main header. -->
-        <div class="app-main-header mat-elevation-z8">
-          <md-toolbar color="accent">
-            <a md-button class="button" routerLink="/">
-              <!-- TODO: Add home icon. -->
-              <h1>Sam Ward</h1>
-            </a>
-            <span class="header-spacer"></span>
-            <a md-button class="button" href="https://github.com/mojzunet" target="_blank" aria-label="GitHub Profile">
-              <md-icon svgIcon="github"></md-icon>
-              <span class="button-text">GitHub</span>
-            </a>
-          </md-toolbar>
-        </div>
-
-        <!-- Application router. -->
-        <router-outlet></router-outlet>
-
-      </main>
-    </div>
+    </main>
 
   </div>
+
 </div>

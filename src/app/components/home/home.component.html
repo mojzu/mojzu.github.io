@@ -1,20 +1,22 @@
-<div class="home-container">
+<div class="home">
   <!-- TODO: Home content. -->
-  <!-- <div class="home-content mat-elevation-z8"></div> -->
+  <!-- <div class="content mat-elevation-z8"></div> -->
 
   <!-- Home tiles grid. -->
-  <md-grid-list cols="4" rowHeight="2:1" gutterSize="5px">
+  <md-grid-list cols="4" rowHeight="2:1" [gutterSize]="tileGutterSize">
     <ng-container *ngFor="let tile of tiles; let i = index">
 
-      <md-grid-tile class="mat-elevation-z8" [colspan]="tileColumns[i]" [rowspan]="tileRows[i]">
-        <div class="home-tile" fxLayout="column">
+      <md-grid-tile class="mat-elevation-z8" [colspan]="tileColumnSpans[i]" [rowspan]="tileRowSpans[i]">
+        <div class="tile" fxLayout="column">
 
-          <img class="home-tile-background" src="assets/{{ tile.background }}">
-          <div class="home-tile-overlay-container" fxLayout="column">
-            <div class="home-tile-overlay mat-elevation-z8">
+          <img class="background" [src]="tileBackground(tile)">
+          <div class="overlay-container" fxLayout="column">
+            <div class="overlay mat-elevation-z8">
               <a [routerLink]="tile.link">
-                <h2>{{ tile.title }}</h2>
-                <p>{{ tile.description }}</p>
+                <div class="overlay-content">
+                  <h2>{{ tile.title }}</h2>
+                  <p>{{ tile.description }}</p>
+                </div>
               </a>
             </div>
           </div>

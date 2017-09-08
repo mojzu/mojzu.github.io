@@ -7,6 +7,7 @@ import { ITile } from "./home";
 @Component({
   selector: "AppHome",
   templateUrl: "./home.component.html",
+  styleUrls: ["./home.scss"],
 })
 export class HomeComponent implements OnDestroy {
 
@@ -16,16 +17,15 @@ export class HomeComponent implements OnDestroy {
     // TODO: MojzuNet tile.
   ];
 
-  // Tile layouts based on screen size.
-  public tileColumns: number[];
-  public tileRows: number[];
+  // Tile layout properties.
+  public tileGutterSize = "5px";
+  public tileColumnSpans: number[];
+  public tileRowSpans: number[];
 
   /** Subscriber to observable media service. */
   protected mediaWatcher: Subscription;
 
-  public constructor(
-    protected media: ObservableMedia,
-  ) {
+  public constructor(protected media: ObservableMedia) {
     // Initialise tile layout and subscribe to changes.
     this.layoutTiles();
     this.mediaWatcher = media.subscribe((change: MediaChange) => {
@@ -38,6 +38,10 @@ export class HomeComponent implements OnDestroy {
     this.mediaWatcher.unsubscribe();
   }
 
+  public tileBackground(tile: ITile): string {
+    return `assets/${tile.background}`;
+  }
+
   protected layoutTiles(query?: string): void {
     // Test for active query if none provided.
     if (query == null) {
@@ -45,25 +49,25 @@ export class HomeComponent implements OnDestroy {
     }
 
     // Reuse existing arrays or create new ones.
-    const tileColumns = this.tileColumns || new Array(this.tiles.length).fill(1);
-    const tileRows = this.tileRows || new Array(this.tiles.length).fill(1);
+    const tileColumnSpans = this.tileColumnSpans || new Array(this.tiles.length).fill(1);
+    const tileRowSpans = this.tileRowSpans || new Array(this.tiles.length).fill(1);
 
-    tileColumns.map((v, i) => {
+    tileColumnSpans.map((v, i) => {
       switch (query) {
         // Mobile layout.
         case "xs": {
-          tileColumns[i] = 4;
-          tileRows[i] = 4;
+          tileColumnSpans[i] = 4;
+          tileRowSpans[i] = 4;
           break;
         }
         // Desktop layout.
         default: {
           if (i < 1) {
-            tileColumns[i] = 4;
-            tileRows[i] = 4;
+            tileColumnSpans[i] = 4;
+            tileRowSpans[i] = 4;
           } else {
-            tileColumns[i] = 2;
-            tileRows[i] = 2;
+            tileColumnSpans[i] = 2;
+            tileRowSpans[i] = 2;
           }
           break;
         }
@@ -71,8 +75,8 @@ export class HomeComponent implements OnDestroy {
     });
 
     // (Re)assign properties.
-    this.tileColumns = tileColumns;
-    this.tileRows = tileRows;
+    this.tileColumnSpans = tileColumnSpans;
+    this.tileRowSpans = tileRowSpans;
   }
 
 }
