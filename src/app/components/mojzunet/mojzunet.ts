@@ -1,4 +1,4 @@
-import { ITile } from "../home";
+import { ITile, IRouteData } from "../home";
 
 export const mojzuNetPath = "mojzunet";
 
@@ -7,4 +7,8 @@ export const mojzuNetTile: ITile = {
   link: `/${mojzuNetPath}`,
   title: "MojzuNet",
   description: "Angular application for showcase website.",
+};
+
+export const mojzuNetRouteData: IRouteData = {
+  title: "MojzuNet",
 };
