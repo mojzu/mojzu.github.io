@@ -1,8 +1,10 @@
 import { ITile } from "../home";
 
-export const tile: ITile = {
-  background: "margin-calculator/tile.png",
-  link: "/margin-calculator",
+export const marginCalculatorPath = "margin-calculator";
+
+export const marginCalculatorTile: ITile = {
+  background: "tiles/margin-calculator.png",
+  link: `/${marginCalculatorPath}`,
   title: "Margin Calculator",
   description: "Android margin and markup calculator application with currency conversion and optional discount.",
 };

@@ -16,6 +16,7 @@ import { AppComponent } from "./app.component";
 
 import { HomeComponent } from "./components/home";
 import { MarginCalculatorComponent } from "./components/margin-calculator";
+import { MojzuNetComponent } from "./components/mojzunet";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MarginCalculatorComponent } from "./components/margin-calculator";
     AppComponent,
     HomeComponent,
     MarginCalculatorComponent,
+    MojzuNetComponent,
   ],
   imports: [
     // Angular modules.

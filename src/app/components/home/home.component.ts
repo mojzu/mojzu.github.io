@@ -1,7 +1,8 @@
 import { Component, OnDestroy } from "@angular/core";
 import { MediaChange, ObservableMedia } from "@angular/flex-layout";
 import { Subscription } from "rxjs/Subscription";
-import * as marginCalculator from "../margin-calculator";
+import { marginCalculatorTile } from "../margin-calculator";
+import { mojzuNetTile } from "../mojzunet";
 import { ITile } from "./home";
 
 @Component({
@@ -13,8 +14,8 @@ export class HomeComponent implements OnDestroy {
 
   /** Tiles. */
   public tiles: ITile[] = [
-    marginCalculator.tile,
-    // TODO: MojzuNet tile.
+    marginCalculatorTile,
+    mojzuNetTile,
   ];
 
   // Tile layout properties.

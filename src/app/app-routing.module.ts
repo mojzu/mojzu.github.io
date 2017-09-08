@@ -2,12 +2,17 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./components/home";
-import { MarginCalculatorComponent } from "./components/margin-calculator";
+import { marginCalculatorPath, MarginCalculatorComponent } from "./components/margin-calculator";
+import { mojzuNetPath, MojzuNetComponent } from "./components/mojzunet";
 
 const routes: Routes = [
   {
-    path: "margin-calculator",
+    path: marginCalculatorPath,
     component: MarginCalculatorComponent,
+  },
+  {
+    path: mojzuNetPath,
+    component: MojzuNetComponent,
   },
   {
     path: "",
