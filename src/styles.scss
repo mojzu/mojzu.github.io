@@ -24,13 +24,25 @@ $mojzunet-typography: mat-typography-config(
 // Angular material.
 @include mat-core($mojzunet-typography);
 
-// Angular material theme.
-$mojzunet-primary: mat-palette($mat-blue-grey);
-$mojzunet-accent: mat-palette($mat-indigo);
-$mojzunet-theme: mat-dark-theme($mojzunet-primary, $mojzunet-accent);
-@include angular-material-theme($mojzunet-theme);
+// Default Angular material dark theme.
+$mojzunet-primary: mat-palette($mat-indigo);
+$mojzunet-accent: mat-palette($mat-yellow);
+$mojzunet-dark-theme: mat-dark-theme($mojzunet-primary, $mojzunet-accent);
 
-// Component mixin themes.
-@include app-theme($mojzunet-theme);
-@include content-theme($mojzunet-theme);
-@include home-theme($mojzunet-theme);
+// Default theme mixins.
+@include angular-material-theme($mojzunet-dark-theme);
+@include app-theme($mojzunet-dark-theme);
+@include content-theme($mojzunet-dark-theme);
+@include home-theme($mojzunet-dark-theme);
+
+// Alternate light theme.
+$mojzunet-light-theme: mat-light-theme($mojzunet-primary, $mojzunet-accent);
+
+// Light theme selector.
+// TODO: Theme switch menu and improved light theme support.
+.light-theme {
+  @include angular-material-theme($mojzunet-light-theme);
+  @include app-theme($mojzunet-light-theme);
+  @include content-theme($mojzunet-light-theme);
+  @include home-theme($mojzunet-light-theme);
+}
