@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { mojzuNetReferences } from "./mojzunet";
 
 @Component({
   selector: "AppMojzuNet",
@@ -6,5 +7,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./mojzunet.scss"],
 })
 export class MojzuNetComponent {
+
+  public references = mojzuNetReferences;
 
 }

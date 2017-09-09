@@ -8,6 +8,7 @@ import {
   MdButtonModule,
   MdIconModule,
   MdGridListModule,
+  MdListModule,
 } from "@angular/material";
 import { NgModule } from "@angular/core";
 import { MarkdownModule } from "angular2-markdown";
@@ -15,10 +16,16 @@ import { MarkdownModule } from "angular2-markdown";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { ContentComponent } from "./components/content";
-import { HomeComponent } from "./components/home";
-import { MarginCalculatorComponent } from "./components/margin-calculator";
-import { MojzuNetComponent } from "./components/mojzunet";
+import {
+  ContentComponent,
+  HomeComponent,
+  MarginCalculatorComponent,
+  MojzuNetComponent,
+} from "./components";
+
+import {
+  IconsService,
+} from "./services";
 
 @NgModule({
   declarations: [
@@ -41,12 +48,16 @@ import { MojzuNetComponent } from "./components/mojzunet";
     MdButtonModule,
     MdIconModule,
     MdGridListModule,
+    MdListModule,
     MarkdownModule.forRoot(),
 
     // Application modules.
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    // Application services,
+    IconsService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

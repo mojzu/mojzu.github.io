@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { marginCalculatorReferences } from "./margin-calculator";
 
 @Component({
   selector: "AppMarginCalculator",
@@ -6,5 +7,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./margin-calculator.scss"],
 })
 export class MarginCalculatorComponent {
+
+  public references = marginCalculatorReferences;
 
 }

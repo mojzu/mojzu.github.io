@@ -7,12 +7,12 @@
     <header class="header mat-elevation-z8" role="banner">
       <md-toolbar color="accent">
         <a md-button class="button" routerLink="/" aria-label="Home">
-          <md-icon svgIcon="mojzu" class="large-icon"></md-icon>
+          <md-icon [svgIcon]="icons.mojzu" class="large-icon"></md-icon>
           <span class="text">MojzuNet</span>
         </a>
         <span class="space"></span>
-        <a md-button class="button" href="https://github.com/mojzunet" target="_blank" aria-label="GitHub">
-          <md-icon svgIcon="github"></md-icon>
+        <a md-button class="button" href="https://github.com/mojzunet" aria-label="GitHub">
+          <md-icon [svgIcon]="icons.github"></md-icon>
           <span class="text">GitHub</span>
         </a>
       </md-toolbar>

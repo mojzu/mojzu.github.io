@@ -25,7 +25,7 @@ a {
 // Angular material theme.
 $mojzunet-primary: mat-palette($mat-blue-grey);
 $mojzunet-accent: mat-palette($mat-indigo);
-$mojzunet-theme: mat-light-theme($mojzunet-primary, $mojzunet-accent);
+$mojzunet-theme: mat-dark-theme($mojzunet-primary, $mojzunet-accent);
 @include angular-material-theme($mojzunet-theme);
 
 // Component mixin themes.

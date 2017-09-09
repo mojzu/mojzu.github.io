@@ -3,12 +3,12 @@
 @mixin app-theme($theme) {
 
   // Theme properties.
-  $primary: map-get($theme, primary);
-  $primary-background: mat-color($primary, 50);
+  $theme-background: map-get($theme, background);
+  $background: map-get($theme-background, background);
 
   // Application root element.
   .app {
-    background: $primary-background;
+    background: $background;
   }
 
 }

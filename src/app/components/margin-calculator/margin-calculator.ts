@@ -1,3 +1,5 @@
+import { icons } from "../../services";
+import { IReference } from "../content";
 import { ITile, IRouteData } from "../home";
 
 export const marginCalculatorPath = "margin-calculator";
@@ -12,3 +14,26 @@ export const marginCalculatorTile: ITile = {
 export const marginCalculatorRouteData: IRouteData = {
   title: "Margin Calculator",
 };
+
+export const marginCalculatorReferences: IReference[] = [
+  {
+    href: "https://github.com/mojzunet/MarginCalculator.app",
+    icon: icons.github,
+    text: "GitHub Repository",
+  },
+  {
+    href: "https://play.google.com/store/apps/details?id=com.mojzunet.margincalculator",
+    icon: icons.googlePlay,
+    text: "Google Play",
+  },
+  {
+    href: "https://facebook.github.io/react-native/",
+    icon: icons.react,
+    text: "React Native",
+  },
+  {
+    href: "https://github.com/reactjs/redux",
+    icon: icons.redux,
+    text: "Redux",
+  },
+];

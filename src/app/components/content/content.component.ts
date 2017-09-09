@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { IReference } from "./content";
 
 @Component({
   selector: "AppContent",
@@ -6,5 +7,8 @@ import { Component, Input } from "@angular/core";
   styleUrls: ["./content.scss"],
 })
 export class ContentComponent {
+
+  @Input()
+  public references: IReference[];
 
 }

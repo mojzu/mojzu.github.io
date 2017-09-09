@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Title, DomSanitizer } from "@angular/platform-browser";
+import { Title } from "@angular/platform-browser";
 import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
-import { MdIconRegistry } from "@angular/material";
-import { IRouteData } from "./components/home";
+import { IRouteData } from "./components";
+import { icons, IconsService } from "./services";
 import "rxjs/add/operator/mergeMap";
 
 @Component({
@@ -12,21 +12,17 @@ import "rxjs/add/operator/mergeMap";
 })
 export class AppComponent implements OnInit {
 
+  public icons = icons;
+
   public constructor(
-    protected iconRegistry: MdIconRegistry,
-    protected sanitiser: DomSanitizer,
     protected title: Title,
     protected router: Router,
     protected activatedRoute: ActivatedRoute,
+    // Load icons service with root component.
+    protected iconsService: IconsService,
   ) { }
 
   public ngOnInit(): void {
-    // Toolbar button icons.
-    this.iconRegistry.addSvgIcon("mojzu",
-      this.sanitiser.bypassSecurityTrustResourceUrl("assets/icons/mojzu.svg"));
-    this.iconRegistry.addSvgIcon("github",
-      this.sanitiser.bypassSecurityTrustResourceUrl("assets/icons/github.svg"));
-
     // Set HTML title based on route.
     this.router.events
       .filter((event) => event instanceof NavigationEnd)

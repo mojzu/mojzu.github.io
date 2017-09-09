@@ -4,22 +4,43 @@
 
   // Theme properties.
   $accent: map-get($theme, accent);
-  $background: mat-color($mat-grey, 50);
-  $link-color: mat-color($accent, 400);
-  $link-color-hover: mat-color($accent, 700);
+  $theme-foreground: map-get($theme, foreground);
+  $theme-background: map-get($theme, background);
+  $color: map-get($theme-foreground, text);
+  $background: map-get($theme-background, card);
+  $divider: map-get($theme-foreground, divider);
+  // TODO: Light theme support.
+  $link-color: mat-color($accent, 300);
+  $link-color-hover: mat-color($accent, 100);
 
   // Content container.
   .content {
     background-color: $background;
+    color: $color;
 
     // Markdown component styles.
     h1 {
       margin: 0;
     }
+    p {
+      line-height: 1.2em;
+    }
     a {
       color: $link-color;
       &:hover {
         color: $link-color-hover;
+      }
+    }
+    li {
+      margin: 0.2em;
+    }
+
+    // References container.
+    .references {
+      border-top: 2px solid $divider;
+
+      .text {
+        margin-left: 6px;
       }
     }
   }
