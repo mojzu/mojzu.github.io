@@ -10,10 +10,12 @@ import {
   MdGridListModule,
 } from "@angular/material";
 import { NgModule } from "@angular/core";
+import { MarkdownModule } from "angular2-markdown";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
+import { ContentComponent } from "./components/content";
 import { HomeComponent } from "./components/home";
 import { MarginCalculatorComponent } from "./components/margin-calculator";
 import { MojzuNetComponent } from "./components/mojzunet";
@@ -22,6 +24,7 @@ import { MojzuNetComponent } from "./components/mojzunet";
   declarations: [
     // Application components.
     AppComponent,
+    ContentComponent,
     HomeComponent,
     MarginCalculatorComponent,
     MojzuNetComponent,
@@ -32,12 +35,13 @@ import { MojzuNetComponent } from "./components/mojzunet";
     BrowserAnimationsModule,
     HttpModule,
 
-    // Flex layout, Material modules.
+    // Flex layout, Material and Markdown modules.
     FlexLayoutModule,
     MdToolbarModule,
     MdButtonModule,
     MdIconModule,
     MdGridListModule,
+    MarkdownModule.forRoot(),
 
     // Application modules.
     AppRoutingModule,

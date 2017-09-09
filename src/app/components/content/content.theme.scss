@@ -1,0 +1,27 @@
+@import "~@angular/material/theming";
+
+@mixin content-theme($theme) {
+
+  // Theme properties.
+  $accent: map-get($theme, accent);
+  $background: mat-color($mat-grey, 50);
+  $link-color: mat-color($accent, 400);
+  $link-color-hover: mat-color($accent, 700);
+
+  // Content container.
+  .content {
+    background-color: $background;
+
+    // Markdown component styles.
+    h1 {
+      margin: 0;
+    }
+    a {
+      color: $link-color;
+      &:hover {
+        color: $link-color-hover;
+      }
+    }
+  }
+
+}
