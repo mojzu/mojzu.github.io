@@ -11,16 +11,18 @@
 $open-sans: "Open Sans", sans-serif;
 
 // Common styles.
-body {
-  font-family: $open-sans;
-}
 a {
   color: inherit;
   text-decoration: none;
 }
 
+// Typography configuration.
+$mojzunet-typography: mat-typography-config(
+  $font-family: $open-sans
+);
+
 // Angular material.
-@include mat-core();
+@include mat-core($mojzunet-typography);
 
 // Angular material theme.
 $mojzunet-primary: mat-palette($mat-blue-grey);
