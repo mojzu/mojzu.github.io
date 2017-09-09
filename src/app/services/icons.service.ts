@@ -2,29 +2,38 @@ import { Injectable } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { MdIconRegistry } from "@angular/material";
 
-const mojzu = "mojzu";
+const angular = "angular";
 const github = "github";
 const googlePlay = "googlePlay";
+const mojzu = "mojzu";
+const nodejs = "nodejs";
 const react = "react";
 const redux = "redux";
-const angular = "angular";
+const rxjs = "rxjs";
+const typescript = "typescript";
 
 export const icons = {
-  mojzu,
+  angular,
   github,
   googlePlay,
+  mojzu,
+  nodejs,
   react,
   redux,
-  angular,
+  rxjs,
+  typescript,
 };
 
 export const iconUrls = {
-  [mojzu]: "assets/icons/mojzu.svg",
+  [angular]: "assets/icons/angular.svg",
   [github]: "assets/icons/github.svg",
   [googlePlay]: "assets/icons/google-play.svg",
+  [mojzu]: "assets/icons/mojzu.svg",
+  [nodejs]: "assets/icons/nodejs.svg",
   [react]: "assets/icons/react.svg",
   [redux]: "assets/icons/redux.svg",
-  [angular]: "assets/icons/angular.svg",
+  [rxjs]: "assets/icons/rxjs.svg",
+  [typescript]: "assets/icons/typescript.svg",
 };
 
 @Injectable()
