@@ -9,6 +9,11 @@ import { IReference } from "./content";
 export class ContentComponent {
 
   @Input()
+  public path: string;
+
+  @Input()
   public references: IReference[];
+
+  public get pagePath(): string { return `assets/pages/${this.path}`; }
 
 }
