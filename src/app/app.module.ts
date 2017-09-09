@@ -20,6 +20,7 @@ import {
   ContentComponent,
   HomeComponent,
   MarginCalculatorComponent,
+  ModbusTsComponent,
   MojzuNetComponent,
 } from "./components";
 
@@ -34,6 +35,7 @@ import {
     ContentComponent,
     HomeComponent,
     MarginCalculatorComponent,
+    ModbusTsComponent,
     MojzuNetComponent,
   ],
   imports: [

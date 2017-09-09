@@ -6,6 +6,9 @@ import {
   marginCalculatorRouteData,
   marginCalculatorPath,
   MarginCalculatorComponent,
+  modbusTsRouteData,
+  modbusTsPath,
+  ModbusTsComponent,
   mojzuNetRouteData,
   mojzuNetPath,
   MojzuNetComponent,
@@ -16,6 +19,11 @@ const routes: Routes = [
     path: marginCalculatorPath,
     component: MarginCalculatorComponent,
     data: marginCalculatorRouteData,
+  },
+  {
+    path: modbusTsPath,
+    component: ModbusTsComponent,
+    data: modbusTsRouteData,
   },
   {
     path: mojzuNetPath,
