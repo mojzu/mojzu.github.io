@@ -11,4 +11,20 @@
     background: $background;
   }
 
+  // Header theme menu overrides.
+  // Not scoped to container, appears in overlay.
+  div.mat-menu-panel.theme-menu {
+    min-width: 80px;
+
+    // Header theme buttons.
+    a.mat-menu-item {
+      padding: 4px 16px;
+
+      .theme-button {
+        height: 100%;
+        border-radius: 100%;
+      }
+    }
+  }
+
 }

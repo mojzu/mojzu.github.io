@@ -6,8 +6,9 @@
 @import "app/components/content/content.theme.scss";
 @import "app/components/home/home.theme.scss";
 
-// Google fonts.
+// Google fonts and material icons.
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 $open-sans: "Open Sans";
 
 // Common styles.
@@ -39,7 +40,7 @@ $mojzunet-dark-theme: mat-dark-theme($mojzunet-primary, $mojzunet-accent);
 $mojzunet-light-theme: mat-light-theme($mojzunet-primary, $mojzunet-accent);
 
 // Light theme selector.
-// TODO: Theme switch menu and improved light theme support.
+// TODO: Improved light theme support (separate mixins).
 .light-theme {
   @include angular-material-theme($mojzunet-light-theme);
   @include app-theme($mojzunet-light-theme);

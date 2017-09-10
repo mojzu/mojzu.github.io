@@ -9,6 +9,7 @@ import {
   MdIconModule,
   MdGridListModule,
   MdListModule,
+  MdMenuModule,
 } from "@angular/material";
 import { NgModule } from "@angular/core";
 import { MarkdownModule } from "angular2-markdown";
@@ -51,6 +52,7 @@ import {
     MdIconModule,
     MdGridListModule,
     MdListModule,
+    MdMenuModule,
     MarkdownModule.forRoot(),
 
     // Application modules.

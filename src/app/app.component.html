@@ -6,15 +6,31 @@
     <!-- Application header. -->
     <header class="header mat-elevation-z8" role="banner">
       <md-toolbar color="primary">
+
+        <!-- Home link. -->
         <a md-button class="button" routerLink="/" aria-label="Home">
           <md-icon [svgIcon]="icons.mojzu" class="large-icon"></md-icon>
           <span class="text">MojzuNet</span>
         </a>
+
         <span class="space"></span>
+
+        <!-- GitHub link. -->
         <a md-button class="button" href="https://github.com/mojzunet" aria-label="GitHub">
           <md-icon [svgIcon]="icons.github"></md-icon>
           <span class="text">GitHub</span>
         </a>
+
+        <!-- Theme menu. -->
+        <a md-icon-button [mdMenuTriggerFor]="menu">
+          <md-icon>format_paint</md-icon>
+        </a>
+        <md-menu #menu="mdMenu" class="theme-menu">
+          <a *ngFor="let theme of themes" md-menu-item (click)="setTheme(theme.name)">
+            <div [style.background-color]="theme.colour" class="theme-button mat-elevation-z4"></div>
+          </a>
+        </md-menu>
+
       </md-toolbar>
     </header>
 
