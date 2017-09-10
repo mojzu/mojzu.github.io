@@ -1,4 +1,4 @@
-import { icons } from "../../services";
+import { icons, iconReferences } from "../../services";
 import { IReference } from "../content";
 import { ITile, IRouteData } from "../home";
 
@@ -21,9 +21,8 @@ export const mojzuNetReferences: IReference[] = [
     icon: icons.github,
     text: "GitHub Repository",
   },
-  {
-    href: "https://angular.io/",
-    icon: icons.angular,
-    text: "Angular",
-  },
+  iconReferences.angular,
+  iconReferences.typescript,
+  iconReferences.rxjs,
+  iconReferences.sass,
 ];

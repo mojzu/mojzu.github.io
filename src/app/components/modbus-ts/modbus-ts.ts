@@ -1,4 +1,4 @@
-import { icons } from "../../services";
+import { icons, iconReferences } from "../../services";
 import { IReference } from "../content";
 import { ITile, IRouteData } from "../home";
 
@@ -22,18 +22,12 @@ export const modbusTsReferences: IReference[] = [
     text: "GitHub Repository",
   },
   {
-    href: "https://nodejs.org/en/",
-    icon: icons.nodejs,
-    text: "Node.js",
+    href: "https://www.npmjs.com/package/modbus.ts",
+    icon: icons.npm,
+    text: "NPM Package",
   },
-  {
-    href: "https://www.typescriptlang.org/",
-    icon: icons.typescript,
-    text: "TypeScript",
-  },
-  {
-    href: "http://reactivex.io/rxjs/",
-    icon: icons.rxjs,
-    text: "RxJS",
-  },
+  iconReferences.nodejs,
+  iconReferences.typescript,
+  iconReferences.rxjs,
+  iconReferences.jasmine,
 ];

@@ -1,4 +1,4 @@
-import { icons } from "../../services";
+import { icons, iconReferences } from "../../services";
 import { IReference } from "../content";
 import { ITile, IRouteData } from "../home";
 
@@ -26,14 +26,8 @@ export const marginCalculatorReferences: IReference[] = [
     icon: icons.googlePlay,
     text: "Google Play",
   },
-  {
-    href: "https://facebook.github.io/react-native/",
-    icon: icons.react,
-    text: "React Native",
-  },
-  {
-    href: "https://github.com/reactjs/redux",
-    icon: icons.redux,
-    text: "Redux",
-  },
+  iconReferences.reactNative,
+  iconReferences.redux,
+  iconReferences.reduxObservable,
+  iconReferences.typescript,
 ];
