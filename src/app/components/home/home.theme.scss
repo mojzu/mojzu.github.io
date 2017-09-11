@@ -11,6 +11,9 @@
   $primary-background: mat-color($primary);
   $primary-border: mat-color($primary);
 
+  // Contrast text colour for overlay.
+  $overlay-color: mat-contrast($primary, 500);
+
   // Home container.
   .home {
     .tile {
@@ -25,6 +28,7 @@
 
         &:hover {
           background-color: $primary-background;
+          color: $overlay-color;
         }
       }
     }

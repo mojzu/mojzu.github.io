@@ -6,12 +6,10 @@
   $primary: map-get($theme, primary);
   $theme-foreground: map-get($theme, foreground);
   $theme-background: map-get($theme, background);
+  $is-dark: map-get($theme, is-dark);
   $color: map-get($theme-foreground, text);
   $background: map-get($theme-background, card);
   $divider: map-get($theme-foreground, divider);
-  // TODO: Light theme support.
-  $link-color: mat-color($primary, 300);
-  $link-color-hover: mat-color($primary, 100);
 
   // Content container.
   .content {
@@ -20,9 +18,17 @@
 
     // Markdown component styles.
     a {
-      color: $link-color;
-      &:hover {
-        color: $link-color-hover;
+      // Link text theme support.
+      @if $is-dark {
+        color: mat-color($primary, 300);
+        &:hover {
+          color: mat-color($primary, 100);
+        }
+      } @else {
+        color: mat-color($primary, 400);
+        &:hover {
+          color: mat-color($primary, 700);
+        }
       }
     }
 

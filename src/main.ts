@@ -9,3 +9,8 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
+
+// TODO: I18n support (routes and content).
+// TODO: Universal support.
+// TODO: Automate build process.
+// TODO: Redux store support.
