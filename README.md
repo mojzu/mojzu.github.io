@@ -1,12 +1,31 @@
-# MojzuNet
+# Mojzu
+
+> GitHub pages sources.
 
 ## Developer
 
 ```Shell
-$ yarn run build-github
-# Copy files from /dist to /build/github.io (delete old files).
+# install dependencies
+$ yarn install
+
+# serve with live reload at: localhost:3000
+$ yarn run dev
+
+# build for production and run server
+$ yarn run build
+$ yarn start
+
+# generate static site
+$ yarn run generate
+
+# copy `dist` to `buid/github.io`
 $ cd build/github.io
-# Commit changes to submodule.
+# commit changes to submodule
 $ git push origin master
-# Commit changes, add tags to source repository.
+# commit changes, add tags to source repository
 ```
+
+## Links
+
+-   <https://github.com/nuxt-community/typescript-template>
+-   <https://github.com/Semantic-UI-Vue/Semantic-UI-Vue>
