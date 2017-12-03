@@ -15,7 +15,7 @@ $ yarn run develop
 $ yarn run build
 $ yarn start
 
-# copy `dist` to `buid/github.io`
+$ cp -a public/. build/github.io
 $ cd build/github.io
 # commit changes to submodule
 $ git push origin master
