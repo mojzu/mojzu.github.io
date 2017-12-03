@@ -1,40 +1,32 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "lib": [
       "es2017",
       "dom"
     ],
-    "allowJs": true,
+    "jsx": "react",
     "declaration": false,
     "sourceMap": true,
+    "outDir": "./dist/",
     "removeComments": true,
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "suppressImplicitAnyIndexErrors": true,
     "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "~/*" : ["./*"],
-      "~assets/*": ["./assets/*"],
-      "~components/*": ["./components/*"],
-      "~middleware/*": ["./middleware/*"],
-      "~modules/*": ["./modules/*"],
-      "~pages/*": ["./pages/*"],
-      "~plugins/*": ["./plugins/*"],
-      "~static/*": ["./static/*"],
-      "~store": ["./.nuxt/store"],
-      "~router": ["./.nuxt/router"]
-    },
     "typeRoots": [
       "node_modules/@types"
     ],
-    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
-  }
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
 }

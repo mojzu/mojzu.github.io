@@ -8,15 +8,12 @@
 # install dependencies
 $ yarn install
 
-# serve with live reload at: localhost:3000
-$ yarn run dev
+# serve with live reload at: localhost:8000
+$ yarn run develop
 
 # build for production and run server
 $ yarn run build
 $ yarn start
-
-# generate static site
-$ yarn run generate
 
 # copy `dist` to `buid/github.io`
 $ cd build/github.io
@@ -27,5 +24,4 @@ $ git push origin master
 
 ## Links
 
--   <https://github.com/nuxt-community/typescript-template>
--   <https://github.com/Semantic-UI-Vue/Semantic-UI-Vue>
+-   <https://github.com/fabien0102/gatsby-starter>
