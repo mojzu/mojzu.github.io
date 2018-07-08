@@ -1,3 +1,0 @@
-[submodule "build/github.io"]
-	path = build/github.io
-	url = git@github.com:mojzu/mojzu.github.io.git
