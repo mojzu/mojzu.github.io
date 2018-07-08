@@ -1,5 +1,0 @@
----
-title: Container
----
-
-Example content.
