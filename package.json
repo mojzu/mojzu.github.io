@@ -14,7 +14,8 @@
     "marked": "^0.4.0",
     "polka": "^0.4.0",
     "sapper": "^0.14.1",
-    "sirv": "^0.1.2"
+    "sirv": "^0.1.2",
+    "tachyons": "^4.10.0"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.3",

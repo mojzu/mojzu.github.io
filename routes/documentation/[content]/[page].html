@@ -1,8 +1,14 @@
 <svelte:head>
   <title>{page.metadata.title}</title>
+  <!-- TODO(M): Metadata tags. -->
 </svelte:head>
 
-<h1>{page.metadata.title}</h1>
+<!-- TODO(H): Documentation page. -->
+<header class="w-100 bg-purple pa3">
+  <h1 class="f3 fw6 ma0">
+    <a class="link white hover-yellow" href={page.href}>{page.metadata.title}</a>
+  </h1>
+</header>
 
 <DocumentationContents pages={pages}></DocumentationContents>
 
