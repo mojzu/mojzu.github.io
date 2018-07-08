@@ -1,0 +1,12 @@
+<!-- TODO(H): Documentation contents component. -->
+<nav>
+  <ul>
+    {#each pages as page, i}
+    <li>
+      <a href={page.href}>{i + 1}. {page.metadata.title}</a>
+    </li>
+    {/each}
+  </ul>
+</nav>
+
+<style></style>

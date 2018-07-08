@@ -4,6 +4,8 @@ const config = require("sapper/webpack/config.js");
 const mode = process.env.NODE_ENV;
 const isDevelopment = mode === "development";
 
+// TODO(L): Sass, TypeScript support.
+
 module.exports = {
   entry: config.client.entry(),
   output: config.client.output(),
