@@ -1,0 +1,13 @@
+version: "3"
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: builder.dockerfile
+    image: mojzu/mojzu-builder:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "1234:1234"
+    volumes:
+      - ./:/git

@@ -1,0 +1,17 @@
+{
+  "name": "mojzu",
+  "version": "0.1.0",
+  "repository": "https://github.com/mojzu/mojzu.git",
+  "author": "mojzu <mail@mojzu.net>",
+  "license": "CC0-1.0",
+  "private": true,
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "rm -rf docs && parcel build --dist-dir docs --public-url https://mojzu.net ./src/index.html",
+    "parcel": "parcel"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
