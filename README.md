@@ -1,10 +1,10 @@
-# mojzu
+# mojzu-web
 
 GitHub pages website builder
 
 ```shell
 docker-compose build
-docker-compose run --rm -p 1234:1234 builder
+docker-compose run --rm -p 1234:1234 web
 ```
 
 ```shell

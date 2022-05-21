@@ -1,7 +1,7 @@
 {
-  "name": "mojzu",
+  "name": "mojzu-web",
   "version": "0.1.0",
-  "repository": "https://github.com/mojzu/mojzu.git",
+  "repository": "https://github.com/mojzu/mojzu.github.io",
   "author": "mojzu <mail@mojzu.net>",
   "license": "CC0-1.0",
   "private": true,
@@ -12,6 +12,8 @@
     "parcel": "parcel"
   },
   "devDependencies": {
-    "parcel": "^2.5.0"
+    "parcel": "^2.5.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
   }
 }
