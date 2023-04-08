@@ -1,0 +1,1 @@
+// https://parceljs.org/languages/javascript/#service-workers
