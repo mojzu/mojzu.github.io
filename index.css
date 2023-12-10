@@ -1,14 +1,26 @@
-body {
+:root {
+    --colour-background: #f5f5f5;
+    --colour-text: #0c0a09;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --colour-background: #292524;
+        --colour-text: #fafaf9;
+    }
+}
+div.theme {
+    background-color: var(--colour-background);
+    color: var(--colour-text);
+}
+div.page {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-}
-.container {
-    min-width: 100%;
-    min-height: 100%;
     display: flex;
+}
+div.page-center {
     justify-content: center;
     align-items: center;
 }
