@@ -1,26 +1,55 @@
 :root {
-    --colour-background: #f5f5f5;
-    --colour-text: #0c0a09;
+    --theme-light-colour-background: #f5f5f5;
+    --theme-light-colour-text: #0c0a09;
+    --theme-dark-colour-background: #292524;
+    --theme-dark-colour-text: #fafaf9;
+    --colour-background: var(--theme-light-colour-background);
+    --colour-text: var(--theme-light-colour-text);
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --colour-background: #292524;
-        --colour-text: #fafaf9;
+        --colour-background: var(--theme-dark-colour-background);
+        --colour-text: var(--theme-dark-colour-text);
     }
 }
-div.theme {
+body.theme {
     background-color: var(--colour-background);
     color: var(--colour-text);
 }
+div.theme-light {
+    background-color: var(--theme-light-colour-background);
+    color: var(--theme-light-colour-text);
+}
+div.theme-dark {
+    background-color: var(--theme-dark-colour-background);
+    color: var(--theme-dark-colour-text);
+}
+html,
+body {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
 div.page {
-    position: absolute;
+    position: fixed;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+div.page-section {
+    flex-grow: 1;
     display: flex;
 }
-div.page-center {
+div.page-section-center {
     justify-content: center;
     align-items: center;
 }
